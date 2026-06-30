@@ -56,7 +56,7 @@ export function EmployeesPage() {
   }, [employees, search, statusFilter, skillFilter, locationFilter]);
 
   if (loading) {
-    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-violet-200 border-t-violet-600" /></div>;
+    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-200 border-t-blue-600" /></div>;
   }
 
   return (
@@ -143,7 +143,7 @@ export function EmployeesPage() {
                             {getInitials(e.name)}
                           </div>
                           <div>
-                            <p className="text-sm font-medium text-gray-900 hover:text-violet-600">{e.name}</p>
+                            <p className="text-sm font-medium text-gray-900 hover:text-blue-600">{e.name}</p>
                             <p className="text-xs text-muted-foreground">{e.email}</p>
                           </div>
                         </Link>

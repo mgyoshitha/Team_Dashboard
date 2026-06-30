@@ -74,7 +74,7 @@ export function ProjectsPage() {
   };
 
   if (loading) {
-    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-violet-200 border-t-violet-600" /></div>;
+    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-200 border-t-blue-600" /></div>;
   }
 
   const activeTabLabel = tabConfig.find((tab) => tab.value === activeTab)?.label ?? 'Projects';
@@ -147,11 +147,11 @@ export function ProjectsPage() {
             const skillPreview = p.required_skills.slice(0, 3);
 
             return (
-              <Card key={p.id} className="group h-full border border-slate-200/80 bg-white/90 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-violet-200 hover:shadow-lg">
+              <Card key={p.id} className="group h-full border border-slate-200/80 bg-white/90 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg">
                 <CardContent className="flex h-full flex-col p-5">
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0 flex-1">
-                      <Link to={`/admin/projects/${p.id}`} className="text-lg font-semibold text-slate-900 transition hover:text-violet-600">
+                      <Link to={`/admin/projects/${p.id}`} className="text-lg font-semibold text-slate-900 transition hover:text-blue-600">
                         {p.project_name}
                       </Link>
                       <p className="mt-1 text-sm font-medium text-slate-600">{p.client_name}</p>
@@ -179,14 +179,14 @@ export function ProjectsPage() {
 
                   <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4">
                     <div className="flex items-center gap-2 text-sm text-slate-500">
-                      <Calendar className="h-4 w-4 text-violet-500" />
+                      <Calendar className="h-4 w-4 text-blue-500" />
                       <span>{formatDate(p.start_date)}</span>
                     </div>
 
                     <div className="flex flex-wrap gap-2">
                       {skillPreview.length > 0 ? (
                         skillPreview.map((skill) => (
-                          <span key={skill} className="rounded-full bg-violet-50 px-2.5 py-1 text-xs font-medium text-violet-700">
+                          <span key={skill} className="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700">
                             {skill}
                           </span>
                         ))
@@ -197,7 +197,7 @@ export function ProjectsPage() {
                   </div>
 
                   <div className="mt-4 flex items-center justify-between gap-3">
-                    <Link to={`/admin/projects/${p.id}`} className="text-sm font-medium text-violet-600 transition hover:text-violet-700">
+                    <Link to={`/admin/projects/${p.id}`} className="text-sm font-medium text-blue-600 transition hover:text-blue-700">
                       Open project
                     </Link>
                     <Select value={normalizeProjectStatus(p.status)} onValueChange={(status) => handleStatusChange(p.id, status)}>

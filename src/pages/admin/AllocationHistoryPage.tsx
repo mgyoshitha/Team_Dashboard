@@ -25,7 +25,7 @@ export function AllocationHistoryPage() {
   }, [history, search, actionFilter]);
 
   if (loading) {
-    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-violet-200 border-t-violet-600" /></div>;
+    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-200 border-t-blue-600" /></div>;
   }
 
   return (
@@ -86,7 +86,7 @@ export function AllocationHistoryPage() {
                     </td>
                     <td className="px-4 py-3 text-sm text-gray-600">{h.project?.project_name || '—'}</td>
                     <td className="px-4 py-3">
-                      <span className="inline-flex items-center rounded-full bg-violet-50 px-2.5 py-0.5 text-xs font-medium capitalize text-violet-700">{h.action}</span>
+                      <span className="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium capitalize text-blue-700">{h.action}</span>
                     </td>
                     <td className="px-4 py-3 text-sm font-medium text-gray-900">{h.allocation_percentage ? `${h.allocation_percentage}%` : '—'}</td>
                     <td className="px-4 py-3">{h.allocation_type ? <AllocationTypeBadge type={h.allocation_type} /> : '—'}</td>

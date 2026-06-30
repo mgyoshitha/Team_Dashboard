@@ -5,6 +5,7 @@ import { useAuth } from '@/lib/auth';
 import { cn, getInitials, getAvatarColor } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
+
 interface NavItem {
   label: string;
   to: string;
@@ -60,7 +61,7 @@ export function DashboardLayout({ navItems, children, title }: DashboardLayoutPr
         {/* Mobile header */}
         <header className="flex items-center justify-between border-b border-gray-200 bg-white px-4 py-3 lg:hidden">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-600">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600">
               <Layers className="h-4 w-4 text-white" />
             </div>
             <span className="font-semibold text-gray-900">{title}</span>
@@ -89,17 +90,12 @@ interface SidebarContentProps {
 function SidebarContent({ navItems, title, profile, onSignOut, onClose }: SidebarContentProps) {
   return (
     <div className="flex h-full flex-col">
-      {/* Logo */}
       <div className="flex items-center justify-between px-6 py-5">
-        <div className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-violet-600 shadow-sm shadow-violet-200">
-            <Layers className="h-5 w-5 text-white" />
+        
+          <div className="flex h-15 w-15 items-center justify-center rounded-xl">
+            <img src="../src/static/image.png"></img>
           </div>
-          <div>
-            <p className="text-sm font-bold text-gray-900">Shadow</p>
-            <p className="text-xs text-muted-foreground">Allotment Tracker</p>
-          </div>
-        </div>
+       
         {onClose && (
           <Button variant="ghost" size="icon" onClick={onClose} className="lg:hidden">
             <X className="h-5 w-5" />
@@ -122,7 +118,7 @@ function SidebarContent({ navItems, title, profile, onSignOut, onClose }: Sideba
               cn(
                 'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all',
                 isActive
-                  ? 'bg-violet-50 text-violet-700'
+                  ? 'bg-blue-50 text-blue-700'
                   : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
               )
             }

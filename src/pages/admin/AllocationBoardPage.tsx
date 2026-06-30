@@ -50,7 +50,7 @@ export function AllocationBoardPage() {
   }, [refreshBoard]);
 
   if (loading) {
-    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-violet-200 border-t-violet-600" /></div>;
+    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-200 border-t-blue-600" /></div>;
   }
 
   const getProjectAllocs = (id: string) => allocations.filter((a) => a.project_id === id);
@@ -91,7 +91,7 @@ export function AllocationBoardPage() {
               filteredEmployees.map((e) => {
                 const empAllocs = allocations.filter((a) => a.employee_id === e.id);
                 return (
-                  <div key={e.id} className="rounded-lg border border-gray-100 p-3 hover:border-violet-200 hover:bg-violet-50/30">
+                  <div key={e.id} className="rounded-lg border border-gray-100 p-3 hover:border-blue-200 hover:bg-blue-50/30">
                     <div className="flex items-center gap-3">
                       <div className={cn('flex h-9 w-9 items-center justify-center rounded-full text-xs font-semibold', getAvatarColor(e.name))}>
                         {getInitials(e.name)}
@@ -153,7 +153,7 @@ export function AllocationBoardPage() {
                 const primary = projAllocs.filter((a) => a.allocation_type === 'primary');
                 const shadow = projAllocs.filter((a) => a.allocation_type === 'shadow');
                 return (
-                  <div key={p.id} className="rounded-lg border border-gray-100 p-3 hover:border-violet-200 hover:bg-violet-50/30">
+                  <div key={p.id} className="rounded-lg border border-gray-100 p-3 hover:border-blue-200 hover:bg-blue-50/30">
                     <div className="flex items-center justify-between">
                       <div className="min-w-0 flex-1">
                         <p className="truncate text-sm font-medium text-gray-900">{p.project_name}</p>
@@ -173,7 +173,7 @@ export function AllocationBoardPage() {
                         <p className="mb-1 text-xs font-medium text-muted-foreground">Primary ({primary.length})</p>
                         <div className="space-y-1">
                           {primary.map((a) => (
-                            <div key={a.id} className="flex items-center gap-1.5 rounded-md bg-violet-50 px-2 py-1">
+                            <div key={a.id} className="flex items-center gap-1.5 rounded-md bg-blue-50 px-2 py-1">
                               <div className={cn('flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-semibold', getAvatarColor(a.employee?.name || 'U'))}>
                                 {getInitials(a.employee?.name || 'U')}
                               </div>

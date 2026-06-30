@@ -38,7 +38,7 @@ export function ProjectDetailPage() {
   }, [id]);
 
   if (loading) {
-    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-violet-200 border-t-violet-600" /></div>;
+    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-200 border-t-blue-600" /></div>;
   }
 
   if (!project) {
@@ -114,7 +114,7 @@ export function ProjectDetailPage() {
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 {project.required_skills.length > 0 ? (
-                  project.required_skills.map((s) => <span key={s} className="rounded-lg bg-violet-100 px-3 py-1 text-sm font-medium text-violet-700">{s}</span>)
+                  project.required_skills.map((s) => <span key={s} className="rounded-lg bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">{s}</span>)
                 ) : (
                   <span className="text-sm text-muted-foreground">No required skills listed</span>
                 )}
@@ -126,10 +126,10 @@ export function ProjectDetailPage() {
             <CardHeader><CardTitle className="text-base">Utilization</CardTitle></CardHeader>
             <CardContent>
               <div className="text-center">
-                <p className="text-4xl font-bold text-violet-600">{utilization}%</p>
+                <p className="text-4xl font-bold text-blue-600">{utilization}%</p>
                 <p className="mt-1 text-sm text-muted-foreground">Average per resource</p>
                 <div className="mt-4 h-2 overflow-hidden rounded-full bg-gray-100">
-                  <div className="h-full rounded-full bg-violet-500" style={{ width: `${utilization}%` }} />
+                  <div className="h-full rounded-full bg-blue-500" style={{ width: `${utilization}%` }} />
                 </div>
                 <p className="mt-3 text-sm text-gray-600">{activeAllocs.length} active resources · {totalAlloc}% total allocation</p>
               </div>
@@ -151,7 +151,7 @@ export function ProjectDetailPage() {
                       {getInitials(a.employee?.name || 'U')}
                     </Link>
                     <div className="flex-1">
-                      <Link to={`/admin/employees/${a.employee_id}`} className="text-sm font-medium text-gray-900 hover:text-violet-600">
+                      <Link to={`/admin/employees/${a.employee_id}`} className="text-sm font-medium text-gray-900 hover:text-blue-600">
                         {a.employee?.name}
                       </Link>
                       <p className="text-xs text-muted-foreground">{a.employee?.designation}</p>
@@ -179,7 +179,7 @@ export function ProjectDetailPage() {
                       {getInitials(a.employee?.name || 'U')}
                     </Link>
                     <div className="flex-1">
-                      <Link to={`/admin/employees/${a.employee_id}`} className="text-sm font-medium text-gray-900 hover:text-violet-600">
+                      <Link to={`/admin/employees/${a.employee_id}`} className="text-sm font-medium text-gray-900 hover:text-blue-600">
                         {a.employee?.name}
                       </Link>
                       <p className="text-xs text-muted-foreground">{a.employee?.designation}</p>

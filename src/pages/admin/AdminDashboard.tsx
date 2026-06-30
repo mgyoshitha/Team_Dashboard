@@ -16,7 +16,7 @@ export function AdminDashboard() {
   const navigate = useNavigate();
 
   if (loading) {
-    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-violet-200 border-t-violet-600" /></div>;
+    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-200 border-t-blue-600" /></div>;
   }
 
   const employees = profiles.filter((p) => p.role === 'employee');
@@ -36,7 +36,7 @@ export function AdminDashboard() {
     value: getProjectAllocations(allocations, p.id).length,
   })).filter((d) => d.value > 0);
 
-  const PIE_COLORS = ['#6C4CF1', '#3B82F6', '#10B981', '#F59E0B', '#EC4899', '#8B5CF6'];
+  const PIE_COLORS = ['#003D7A', '#0066CC', '#10B981', '#F59E0B', '#00B8E6', '#0052A3'];
 
   // Employee status data
   const statusData = [
@@ -59,10 +59,10 @@ export function AdminDashboard() {
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-6">
         <StatCard label="Total Employees" value={employees.length} icon={<Users className="h-6 w-6" />} />
         <StatCard label="Projects" value={projectsList.length} icon={<FolderKanban className="h-6 w-6" />} iconBg="bg-blue-50 text-blue-600" />
-        <StatCard label="Accelerators" value={acceleratorsList.length} icon={<FolderKanban className="h-6 w-6" />} iconBg="bg-violet-50 text-violet-600" />
+        <StatCard label="Accelerators" value={acceleratorsList.length} icon={<FolderKanban className="h-6 w-6" />} iconBg="bg-blue-50 text-blue-600" />
         <StatCard label="POCs" value={pocsList.length} icon={<FolderKanban className="h-6 w-6" />} iconBg="bg-emerald-50 text-emerald-600" />
         <StatCard label="Allocated" value={allocatedEmployees.length} icon={<UserCheck className="h-6 w-6" />} iconBg="bg-emerald-50 text-emerald-600" />
-        <StatCard label="Utilization" value={`${utilization}%`} icon={<TrendingUp className="h-6 w-6" />} iconBg="bg-violet-50 text-violet-600" />
+        <StatCard label="Utilization" value={`${utilization}%`} icon={<TrendingUp className="h-6 w-6" />} iconBg="bg-blue-50 text-blue-600" />
       </div>
 
       {/* Charts */}
@@ -129,7 +129,7 @@ export function AdminDashboard() {
         <Card className="shadow-sm">
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle className="text-base">Recent Allocations</CardTitle>
-            <Link to="/admin/allocation-board" className="text-xs font-medium text-violet-600 hover:underline">View all</Link>
+            <Link to="/admin/allocation-board" className="text-xs font-medium text-blue-600 hover:underline">View all</Link>
           </CardHeader>
           <CardContent className="space-y-3">
             {recentAllocations.length === 0 ? (
@@ -159,7 +159,7 @@ export function AdminDashboard() {
           <Card className="shadow-sm">
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle className="text-base">Recent Projects</CardTitle>
-              <Link to="/admin/projects" className="text-xs font-medium text-violet-600 hover:underline">View all</Link>
+              <Link to="/admin/projects" className="text-xs font-medium text-blue-600 hover:underline">View all</Link>
             </CardHeader>
             <CardContent className="space-y-3">
               {recentProjects.length === 0 ? (
@@ -184,7 +184,7 @@ export function AdminDashboard() {
           <Card className="shadow-sm">
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle className="text-base">Recent Accelerators</CardTitle>
-              <Link to="/admin/projects" className="text-xs font-medium text-violet-600 hover:underline">View all</Link>
+              <Link to="/admin/projects" className="text-xs font-medium text-blue-600 hover:underline">View all</Link>
             </CardHeader>
             <CardContent className="space-y-3">
               {recentAccelerators.length === 0 ? (
@@ -209,7 +209,7 @@ export function AdminDashboard() {
           <Card className="shadow-sm">
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle className="text-base">Recent POCs</CardTitle>
-              <Link to="/admin/projects" className="text-xs font-medium text-violet-600 hover:underline">View all</Link>
+              <Link to="/admin/projects" className="text-xs font-medium text-blue-600 hover:underline">View all</Link>
             </CardHeader>
             <CardContent className="space-y-3">
               {recentPocs.length === 0 ? (
@@ -237,7 +237,7 @@ export function AdminDashboard() {
       <Card className="mt-6 shadow-sm">
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle className="text-base">Recent Activities</CardTitle>
-          <Link to="/admin/allocation-history" className="text-xs font-medium text-violet-600 hover:underline">View all</Link>
+          <Link to="/admin/allocation-history" className="text-xs font-medium text-blue-600 hover:underline">View all</Link>
         </CardHeader>
         <CardContent className="space-y-3">
           {recentHistory.length === 0 ? (

@@ -54,14 +54,10 @@ export function LoginPage() {
   return (
     <div className="flex min-h-screen bg-white">
       {/* Left side - branding */}
-      <div className="relative hidden w-1/2 flex-col justify-between bg-gradient-to-br from-violet-600 via-violet-700 to-indigo-800 p-12 lg:flex">
+      <div className="relative hidden w-1/2 flex-col justify-between bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900 p-12 lg:flex">
         <div className="flex items-center gap-3 text-white">
           <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 backdrop-blur">
             <Layers className="h-6 w-6" />
-          </div>
-          <div>
-            <p className="text-lg font-bold">Shadow</p>
-            <p className="text-sm text-violet-200">Allotment Tracker</p>
           </div>
         </div>
 
@@ -69,33 +65,33 @@ export function LoginPage() {
           <h1 className="text-4xl font-bold leading-tight">
             Resource allocation,<br />simplified.
           </h1>
-          <p className="max-w-md text-lg text-violet-100">
+          <p className="max-w-md text-lg text-blue-100">
             Manage employees, projects, and allocations across your organization with real-time visibility and smart insights.
           </p>
           <div className="flex gap-8 pt-4">
             <div>
               <p className="text-3xl font-bold">100%</p>
-              <p className="text-sm text-violet-200">Capacity tracking</p>
+              <p className="text-sm text-blue-200">Capacity tracking</p>
             </div>
             <div>
               <p className="text-3xl font-bold">Real-time</p>
-              <p className="text-sm text-violet-200">Allocation board</p>
+              <p className="text-sm text-blue-200">Allocation board</p>
             </div>
             <div>
               <p className="text-3xl font-bold">Smart</p>
-              <p className="text-sm text-violet-200">Shadow resource mgmt</p>
+              <p className="text-sm text-blue-200">Shadow resource mgmt</p>
             </div>
           </div>
         </div>
 
-        <p className="text-sm text-violet-200">Internal tool — Authorized personnel only</p>
+        <p className="text-sm text-blue-200">Internal tool — Authorized personnel only</p>
       </div>
 
       {/* Right side - form */}
       <div className="flex w-full flex-col justify-center px-6 py-12 lg:w-1/2 lg:px-20">
         <div className="mx-auto w-full max-w-sm">
           <div className="mb-8 flex items-center gap-2.5 lg:hidden">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-600">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-700">
               <Layers className="h-5 w-5 text-white" />
             </div>
             <div>
@@ -151,13 +147,6 @@ export function LoginPage() {
             </Button>
           </form>
 
-          <div className="mt-8 rounded-lg border border-gray-200 bg-gray-50 p-4">
-            <p className="text-xs font-medium text-gray-500">Demo credentials:</p>
-            <div className="mt-2 space-y-1 text-xs text-gray-600">
-              <p><span className="font-medium">Admin:</span> admin@shadow.com / ShadowAdmin123!</p>
-              <p><span className="font-medium">Employee:</span> alice@shadow.com / ShadowEmp123!</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

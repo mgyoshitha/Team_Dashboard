@@ -16,7 +16,7 @@ export function ReportsPage() {
   const { profiles, projects, allocations, loading } = useAdminData();
 
   if (loading) {
-    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-violet-200 border-t-violet-600" /></div>;
+    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-200 border-t-blue-600" /></div>;
   }
 
   const employees = profiles.filter((p) => p.role === 'employee');
@@ -74,7 +74,7 @@ export function ReportsPage() {
       <Card className="mb-6 shadow-sm">
         <CardHeader className="flex flex-row items-center justify-between">
           <div className="flex items-center gap-2">
-            <Users className="h-5 w-5 text-violet-600" />
+            <Users className="h-5 w-5 text-blue-600" />
             <CardTitle className="text-base">Employee Utilization Report</CardTitle>
           </div>
           <Button variant="outline" size="sm" onClick={downloadUtilization} className="gap-2">

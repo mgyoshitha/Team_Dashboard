@@ -10,7 +10,7 @@ interface StatCardProps {
   trend?: string;
 }
 
-export function StatCard({ label, value, icon, iconBg = 'bg-violet-50 text-violet-600', trend }: StatCardProps) {
+export function StatCard({ label, value, icon, iconBg = 'bg-blue-50 text-blue-600', trend }: StatCardProps) {
   return (
     <Card className="p-5 shadow-sm transition-shadow hover:shadow-md">
       <div className="flex items-center justify-between">

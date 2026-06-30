@@ -41,7 +41,7 @@ export function EmployeeDetailPage() {
   }, [id]);
 
   if (loading) {
-    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-violet-200 border-t-violet-600" /></div>;
+    return <div className="flex h-96 items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-200 border-t-blue-600" /></div>;
   }
 
   if (!employee) {
@@ -103,7 +103,7 @@ export function EmployeeDetailPage() {
             <CardHeader><CardTitle className="text-base">Skills</CardTitle></CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
-                {employee.primary_skill && <span className="rounded-lg bg-violet-100 px-3 py-1 text-sm font-medium text-violet-700">{employee.primary_skill}</span>}
+                {employee.primary_skill && <span className="rounded-lg bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">{employee.primary_skill}</span>}
                 {employee.secondary_skills.map((s) => <span key={s} className="rounded-lg bg-gray-100 px-3 py-1 text-sm text-gray-600">{s}</span>)}
                 {!employee.primary_skill && employee.secondary_skills.length === 0 && <span className="text-sm text-muted-foreground">No skills listed</span>}
               </div>
@@ -122,7 +122,7 @@ export function EmployeeDetailPage() {
                 activeAllocations.map((a) => (
                   <div key={a.id} className="flex items-center justify-between rounded-lg border border-gray-100 p-4 hover:bg-gray-50">
                     <div className="flex-1">
-                      <Link to={`/admin/projects/${a.project_id}`} className="text-sm font-medium text-gray-900 hover:text-violet-600">
+                      <Link to={`/admin/projects/${a.project_id}`} className="text-sm font-medium text-gray-900 hover:text-blue-600">
                         {a.project?.project_name}
                       </Link>
                       <div className="mt-1 flex items-center gap-2">
@@ -149,7 +149,7 @@ export function EmployeeDetailPage() {
                 <div className="space-y-3">
                   {history.map((h) => (
                     <div key={h.id} className="flex items-center gap-3 text-sm">
-                      <div className="h-2 w-2 rounded-full bg-violet-500" />
+                      <div className="h-2 w-2 rounded-full bg-blue-500" />
                       <div className="flex-1">
                         <span className="font-medium text-gray-900 capitalize">{h.action}</span>
                         <span className="text-muted-foreground"> to {h.project?.project_name || '—'}</span>
